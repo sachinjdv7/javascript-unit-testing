@@ -63,3 +63,25 @@ describe('factorial', () => {
     expect(factorial(-1)).toBeUndefined;
   });
 });
+
+/***********************************************************************/
+
+describe('demo', () => {
+  it('test case', () => {
+    const result = 'The requested file is not found';
+    // to specific
+    expect(result).toBe('The requested file is not found');
+    // better assertion
+    expect(result).toMatch(/not found/i);
+  });
+});
+
+/***********************************************************************/
+
+describe('test', () => {
+  it('test', () => {
+    const res = [1, 2, 3];
+    // expect(res).toBe([1, 2, 3]);
+    expect(res).toEqual(expect.arrayContaining([1, 2, 3]));
+  });
+});
